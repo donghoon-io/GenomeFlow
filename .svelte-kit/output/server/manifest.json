@@ -18,7 +18,7 @@
       "_index-a93c14e4.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-707e424b.css"
+      "assets/entries/pages/__layout.svelte-d87e5a51.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -46,17 +46,6 @@
     ],
     "css": [
       "assets/entries/pages/dashboard.svelte-829b3007.css"
-    ]
-  },
-  "src/routes/about.svelte": {
-    "file": "entries/pages/about.svelte.js",
-    "src": "src/routes/about.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-a93c14e4.js"
-    ],
-    "css": [
-      "assets/entries/pages/about.svelte-64e391b1.css"
     ]
   },
   "_index-a93c14e4.js": {
