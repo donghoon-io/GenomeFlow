@@ -1,7 +1,6 @@
 <script>
 	import "@carbon/charts/styles.min.css";
-	import "carbon-components/css/carbon-components.min.css";
-	import { LineChart } from "@carbon/charts-svelte";
+	import { LineChart, GaugeChart } from "@carbon/charts-svelte";
 </script>
 
 <svelte:head>
@@ -21,85 +20,169 @@
 </div>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+	<div class="m-5">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+			<div>
+				<GaugeChart
+					data={[
+					{
+						"group": "value",
+						"value": 67
+					}
+				]}
+					options={{
+					"title": "CPU",
+					"resizable": true,
+					"height": "250px",
+					"gauge": {
+						"type": "full",
+						"alignment": "center",
+					},
+					"color": {
+						"scale": {
+							"value": "#0C5DD8"
+						}
+					}
+				}}
+					/>
+				<p class="mt-5 text-sm text-center">67 of 100 used</p>
+			</div>
+			<div>
+				<GaugeChart
+					data={[
+					{
+						"group": "value",
+						"value": 67
+					}
+				]}
+					options={{
+					"title": "RAM",
+					"resizable": true,
+					"height": "250px",
+					"gauge": {
+						"type": "full",
+						"alignment": "center",
+					},
+					"color": {
+						"scale": {
+							"value": "#12CFEA"
+						}
+					}
+				}}
+					/>
+					<p class="mt-5 text-sm text-center">67 of 100 used</p>
+			</div>
+			<div>
+				<GaugeChart
+					data={[
+					{
+						"group": "value",
+						"value": 67
+					}
+				]}
+					options={{
+					"title": "HDD",
+					"resizable": true,
+					"height": "250px",
+					"gauge": {
+						"type": "full",
+						"alignment": "center",
+					},
+					"color": {
+						"scale": {
+							"value": "#FAE737"
+						}
+					}
+				}}
+					/>
+					<p class="mt-5 text-sm text-center">67 of 100 used</p>
+			</div>
+		  </div>
+		
+	</div>
+
+</div>
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 	<div class="p-5">
 		<LineChart
 	data={[
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2018-12-31T15:00:00.000Z",
 		"temp": 23
 	},
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2019-01-31T15:00:00.000Z",
 		"temp": 15
 	},
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2019-02-28T15:00:00.000Z",
 		"temp": 24
 	},
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2019-03-31T15:00:00.000Z",
 		"temp": 33
 	},
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2019-04-30T15:00:00.000Z",
 		"temp": 23
 	},
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2019-05-31T15:00:00.000Z",
 		"temp": 32
 	},
 	{
-		"group": "Temperature",
+		"group": "Legend 1",
 		"date": "2019-06-30T15:00:00.000Z",
 		"temp": 23
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2018-12-31T15:00:00.000Z",
 		"rainfall": 50
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2019-01-31T15:00:00.000Z",
 		"rainfall": 65
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2019-02-28T15:00:00.000Z",
 		"rainfall": 35
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2019-03-31T15:00:00.000Z",
 		"rainfall": 43
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2019-04-30T15:00:00.000Z",
 		"rainfall": 53
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2019-05-31T15:00:00.000Z",
 		"rainfall": 19
 	},
 	{
-		"group": "Rainfall",
+		"group": "Legend 2",
 		"date": "2019-06-30T15:00:00.000Z",
 		"rainfall": 13
 	}
 ]}
 	options={{
-	"title": "Line + Line (dual axes)",
+	"title": "Resource allocation over time",
 	"axes": {
 		"left": {
-			"title": "Temperature (°C)",
+			"title": "Legend 1",
 			"mapsTo": "temp"
 		},
 		"bottom": {
@@ -108,10 +191,10 @@
 			"title": "Date"
 		},
 		"right": {
-			"title": "Rainfall (mm)",
+			"title": "Legend 2",
 			"mapsTo": "rainfall",
 			"correspondingDatasets": [
-				"Rainfall"
+				"Legend 2"
 			]
 		}
 	},
