@@ -9,10 +9,9 @@
 <section>
 	<div class="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
 		<div class="px-4 py-5 sm:px-6">
-			<div class="flex gap-3">
-				<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-				<h3 class="text-lg leading-6 font-medium text-gray-900">ESCA</h3>
-			</div>
+			<h3 class="text-lg leading-6 font-medium text-gray-900 mb-3">Keyscreens</h3>
+			<p class="text-sm leading-6 font-light">Keyscreen directory for GenomeFlow prototyping project</p>
+			<p class="text-sm leading-6 font-light">Each screen corresponds to the keyscreen from <a class="text-blue-600 hover:underline" href="https://www.figma.com/file/2If3JWD9tRviCRvVHm1nVO/GenomeFlow-(Copy)?node-id=0%3A1">this Figma worksheet</a></p>
 		</div>
 	</div>
 
@@ -21,62 +20,108 @@
 			<thead class="text-xs text-gray-700 uppercase bg-gray-50">
 				<tr>
 					<th scope="col" class="px-6 py-3"> No </th>
-					<th scope="col" class="px-6 py-3"> Task name </th>
-					<th scope="col" class="px-6 py-3"> Task status </th>
-					<th scope="col" class="px-6 py-3"> CPU </th>
-					<th scope="col" class="px-6 py-3"> RAM </th>
-					<th scope="col" class="px-6 py-3"> HDD </th>
-					<th scope="col" class="px-6 py-3"> Elapsed time </th>
-					<th scope="col" class="px-6 py-3"> Cost </th>
-					<th scope="col" class="px-6 py-3"> Updated </th>
-					<th scope="col" class="px-6 py-3">
-						<span class="sr-only">Edit</span>
-					</th>
+					<th scope="col" class="px-6 py-3"> Figma keyscreen id </th>
+					<th scope="col" class="px-6 py-3"> Design status </th>
+					<th scope="col" class="px-6 py-3"> Data population status </th>
+					<th scope="col" class="px-6 py-3"> Link </th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr class="bg-white border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 1 </th>
-					<td class="px-6 py-4"> Task 1 </td>
-					<td class="px-6 py-4"> Completed </td>
-					<td class="px-6 py-4"> 2.0% </td>
-					<td class="px-6 py-4"> 3.0% </td>
-					<td class="px-6 py-4"> 4.0% </td>
-					<td class="px-6 py-4"> 09:15 </td>
-					<td class="px-6 py-4"> $0.07 </td>
-					<td class="px-6 py-4"> 12/15/2021 10:05:26 PM </td>
-					<td class="px-6 py-4 text-right">
-						<a href="#" class="font-medium text-blue-600 hover:underline">DAG</a>
+					<td class="px-6 py-4"> job_view </td>
+					<td class="px-6 py-4"> Complete </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="job_view" class="font-medium text-blue-600 hover:underline">/ job_view</a>
 					</td>
 				</tr>
-
+			</tbody>
+			<tbody>
 				<tr class="bg-white border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 1 </th>
-					<td class="px-6 py-4"> Task 1 </td>
-					<td class="px-6 py-4"> Completed </td>
-					<td class="px-6 py-4"> 2.0% </td>
-					<td class="px-6 py-4"> 3.0% </td>
-					<td class="px-6 py-4"> 4.0% </td>
-					<td class="px-6 py-4"> 09:15 </td>
-					<td class="px-6 py-4"> $0.07 </td>
-					<td class="px-6 py-4"> 12/15/2021 10:05:26 PM </td>
-					<td class="px-6 py-4 text-right">
-						<a href="#" class="font-medium text-blue-600 hover:underline">DAG</a>
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 2 </th>
+					<td class="px-6 py-4"> task_view </td>
+					<td class="px-6 py-4"> Complete </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="task_view" class="font-medium text-blue-600 hover:underline">/ task_view</a>
 					</td>
 				</tr>
-
+			</tbody>
+			<tbody>
 				<tr class="bg-white border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 1 </th>
-					<td class="px-6 py-4"> Task 1 </td>
-					<td class="px-6 py-4"> Completed </td>
-					<td class="px-6 py-4"> 2.0% </td>
-					<td class="px-6 py-4"> 3.0% </td>
-					<td class="px-6 py-4"> 4.0% </td>
-					<td class="px-6 py-4"> 09:15 </td>
-					<td class="px-6 py-4"> $0.07 </td>
-					<td class="px-6 py-4"> 12/15/2021 10:05:26 PM </td>
-					<td class="px-6 py-4 text-right">
-						<a href="#" class="font-medium text-blue-600 hover:underline">DAG</a>
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 3 </th>
+					<td class="px-6 py-4"> task_view (duplicate) </td>
+					<td class="px-6 py-4"> Complete </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="task_view_2" class="font-medium text-blue-600 hover:underline">/ task_view_2</a>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr class="bg-white border-b">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 4 </th>
+					<td class="px-6 py-4"> First_table </td>
+					<td class="px-6 py-4"> Complete </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="first_table" class="font-medium text-blue-600 hover:underline">/ first_table</a>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr class="bg-white border-b">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 5 </th>
+					<td class="px-6 py-4"> Job_selection </td>
+					<td class="px-6 py-4"> Complete </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="job_selection" class="font-medium text-blue-600 hover:underline">/ job_selection</a>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr class="bg-white border-b">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 6 </th>
+					<td class="px-6 py-4"> Job_dag </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="job_dag" class="font-medium text-blue-600 hover:underline">/ job_dag</a>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr class="bg-white border-b">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 7 </th>
+					<td class="px-6 py-4"> Job_dashboard </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="job_dashboard" class="font-medium text-blue-600 hover:underline">/ job_dashboard</a>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr class="bg-white border-b">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 8 </th>
+					<td class="px-6 py-4"> Task_dag </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="task_dag" class="font-medium text-blue-600 hover:underline">/ task_dag</a>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr class="bg-white border-b">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 9 </th>
+					<td class="px-6 py-4"> Task_dashboard </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4">
+						<a href="task_dashboard" class="font-medium text-blue-600 hover:underline">/ task_dashboard</a>
 					</td>
 				</tr>
 			</tbody>
