@@ -8,16 +8,25 @@
 </svelte:head>
 
 <section>
-	
-
-<div class="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
-	<div class="px-4 py-5 sm:px-6">
-		<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-
-		<h3 class="text-lg leading-6 font-medium text-gray-900">ESCA</h3>
-		<p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
+	<div class="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
+		<div class="px-4 py-5 sm:px-6">
+			<div class="flex">
+				<div class="w-3/5">
+					<div class="flex gap-3">
+						<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+						<h3 class="text-lg leading-6 font-medium text-gray-900">Task 1</h3>
+					</div>
+				</div>
+				<div class="w-2/5">
+					<div class="flex justify-end gap-3">
+						<h3 class="text-sm leading-6 font-medium text-gray-900">Updated</h3>
+						<h3 class="text-sm leading-6 font-light text-gray-900">12/15/2021 10:05:26 PM</h3>
+						<a href="#" class="text-sm leading-6 font-medium text-blue-600 hover:underline">DAG</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 	<div class="m-5">
