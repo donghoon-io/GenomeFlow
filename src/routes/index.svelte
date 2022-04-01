@@ -88,7 +88,7 @@
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="job_dag" class="font-medium text-blue-600 hover:underline">/ job_dag</a>
+						<a class="font-medium text-blue-600 hover:underline">/ job_dag</a>
 					</td>
 				</tr>
 			</tbody>
@@ -99,7 +99,7 @@
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="job_dashboard" class="font-medium text-blue-600 hover:underline">/ job_dashboard</a>
+						<a class="font-medium text-blue-600 hover:underline">/ job_dashboard</a>
 					</td>
 				</tr>
 			</tbody>
@@ -110,7 +110,7 @@
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="task_dag" class="font-medium text-blue-600 hover:underline">/ task_dag</a>
+						<a class="font-medium text-blue-600 hover:underline">/ task_dag</a>
 					</td>
 				</tr>
 			</tbody>
@@ -121,7 +121,7 @@
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="task_dashboard" class="font-medium text-blue-600 hover:underline">/ task_dashboard</a>
+						<a class="font-medium text-blue-600 hover:underline">/ task_dashboard</a>
 					</td>
 				</tr>
 			</tbody>
