@@ -53,7 +53,9 @@
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 2 </th>
 					<td class="px-6 py-4"> aleelab-ten </td>
 					<td class="px-6 py-4"> ESCA </td>
-					<td class="px-6 py-4"> Processing </td>
+					<td class="px-6 py-4">
+						<p class="text-sm text-white bg-blue-400 px-2 py-1 rounded-md text-center">Processing</p>
+					</td>
 					<td class="px-6 py-4"> 173 (0 / 141 / 32) </td>
 					<td class="px-6 py-4"> 16:20 </td>
 					<td class="px-6 py-4"> $1.21 </td>
