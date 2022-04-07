@@ -8,12 +8,14 @@
 </svelte:head>
 
 <section>
-	<div class="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
+	<div class="bg-gray-50 drop-shadow-lg overflow-hidden sm:rounded-lg mb-3">
 		<div class="px-4 py-5 sm:px-6">
 			<div class="flex">
 				<div class="w-3/5">
 					<div class="flex gap-3">
-						<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+						<a href="/">
+							<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+						</a>
 						<h3 class="text-lg leading-6 font-medium text-gray-900">ESCA</h3>
 					</div>
 				</div>
@@ -21,20 +23,20 @@
 					<div class="flex justify-end gap-3">
 						<h3 class="text-sm leading-6 font-medium text-gray-900">Updated</h3>
 						<h3 class="text-sm leading-6 font-light text-gray-900">12/15/2021 10:05:26 PM</h3>
-						<a href="#" class="text-sm leading-6 font-medium text-blue-600 hover:underline">DAG</a>
+						<a href="#" class="text-sm text-white hover:underline bg-gray-700 px-2 py-1 rounded-md">DAG</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-		<div class="px-4 py-5 sm:px-6">
+	<div class="relative overflow-x-auto">
+		<div class="py-5">
 			<div class="flex gap-5">
-				<div class="w-4/5">
+				<div class="w-3/4">
 					<p class="font-semibold">Average resource used over time</p>
-					<div class="flex gap-5 py-5">
-						<div class="w-1/6">
+					<div class="flex gap-5 p-5 bg-gray-50 drop-shadow-lg sm:rounded-lg mt-3">
+						<div class="w-1/6 my-3">
 							<GaugeChart
 								data={[
 									{
@@ -114,7 +116,7 @@
 							/>
 						</div>
 					</div>
-					<div class="flex gap-5 py-5">
+					<div class="flex gap-5 my-3 p-5 bg-gray-50 drop-shadow-lg sm:rounded-lg">
 						<div class="w-1/6">
 							<GaugeChart
 								data={[
@@ -195,7 +197,7 @@
 							/>
 						</div>
 					</div>
-					<div class="flex gap-5 py-5">
+					<div class="flex gap-5 my-3 p-5 bg-gray-50 drop-shadow-lg sm:rounded-lg">
 						<div class="w-1/6">
 							<GaugeChart
 								data={[
@@ -277,85 +279,87 @@
 						</div>
 					</div>
 				</div>
-				<div class="w-1/5">
+				<div class="w-1/4">
 					<p class="font-semibold">Total elapsed time and cost</p>
-					<div class="my-5">
-						<BarChartSimple
-							data={[
-							{
-								"group": "Expected value",
-								"value": 65000
-							},
-							{
-								"group": "Current value",
-								"value": 29123
-							},
-						]}
-							options={{
-							"title": "Total elapsed time",
-							"axes": {
-								"left": {
-									"mapsTo": "value"
+					<div class="bg-gray-50 drop-shadow-lg sm:rounded-lg p-5 mt-3">
+						<div>
+							<BarChartSimple
+								data={[
+								{
+									"group": "Expected value",
+									"value": 65000
 								},
-								"bottom": {
-									"mapsTo": "group",
-									"scaleType": "labels"
-								}
-							},
-							"height": "263px",
-							"color": {
-								"pairing": {
-									"option": 2
+								{
+									"group": "Current value",
+									"value": 29123
 								},
-								"scale": {
-									"Expected value": "#999999",
-									"Current value": "#0C5DD8"
-								}
-							},
-							"legend": {
-								"enabled": false
-							},
-						}}
-						/>
-					</div>
-					<div class="my-5">
-						<BarChartSimple
-							data={[
-							{
-								"group": "Expected value",
-								"value": 65000
-							},
-							{
-								"group": "Current value",
-								"value": 29123
-							},
-						]}
-							options={{
-							"title": "Cost",
-							"axes": {
-								"left": {
-									"mapsTo": "value"
+							]}
+								options={{
+								"title": "Total elapsed time",
+								"axes": {
+									"left": {
+										"mapsTo": "value"
+									},
+									"bottom": {
+										"mapsTo": "group",
+										"scaleType": "labels"
+									}
 								},
-								"bottom": {
-									"mapsTo": "group",
-									"scaleType": "labels"
-								}
-							},
-							"height": "263px",
-							"color": {
-								"pairing": {
-									"option": 2
+								"height": "263px",
+								"color": {
+									"pairing": {
+										"option": 2
+									},
+									"scale": {
+										"Expected value": "#999999",
+										"Current value": "#0C5DD8"
+									}
 								},
-								"scale": {
-									"Expected value": "#999999",
-									"Current value": "#0C5DD8"
-								}
-							},
-							"legend": {
-								"enabled": false
-							},
-						}}
-						/>
+								"legend": {
+									"enabled": false
+								},
+							}}
+							/>
+						</div>
+						<div class="my-5">
+							<BarChartSimple
+								data={[
+								{
+									"group": "Expected value",
+									"value": 65000
+								},
+								{
+									"group": "Current value",
+									"value": 29123
+								},
+							]}
+								options={{
+								"title": "Cost",
+								"axes": {
+									"left": {
+										"mapsTo": "value"
+									},
+									"bottom": {
+										"mapsTo": "group",
+										"scaleType": "labels"
+									}
+								},
+								"height": "263px",
+								"color": {
+									"pairing": {
+										"option": 2
+									},
+									"scale": {
+										"Expected value": "#999999",
+										"Current value": "#0C5DD8"
+									}
+								},
+								"legend": {
+									"enabled": false
+								},
+							}}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -37,4 +37,8 @@
 	footer {
 		margin: 1rem !important;
 	}
+
+	:global(rect.chart-grid-backdrop) {
+		fill: rgba(250,250,250, 0) !important;
+	}
 </style>

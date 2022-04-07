@@ -8,36 +8,37 @@
 </svelte:head>
 
 <section>
-	<div class="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
+	<div class="bg-gray-50 drop-shadow-lg overflow-hidden sm:rounded-lg mb-3">
 		<div class="px-4 py-5 sm:px-6">
 			<div class="flex gap-3">
-				<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+				<a href="/">
+					<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+				</a>
 				<h3 class="text-lg leading-6 font-medium text-gray-900">ESCA</h3>
 			</div>
 		</div>
 	</div>
-	<div class="bg-white overflow-hidden sm:rounded-lg m-3">
+	<div class="bg-gray-50 drop-shadow-lg overflow-hidden sm:rounded-lg m-3">
 		<div class="px-4 py-5 sm:px-6">
 			<div class="flex">
 				<div class="w-3/5">
 					<div class="flex gap-3">
-						<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+						<a href="/">
+							<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+						</a>
 						<h3 class="text-lg leading-6 font-medium text-gray-900">Task 1</h3>
-						<a href="#" class="text-lg leading-6 font-medium text-blue-600 hover:underline">Completed</a>
+						<a href="#" class="text-sm leading-none text-white bg-blue-700 px-2 py-1 rounded-md text-center">Completed</a>
 					</div>
 				</div>
 				<div class="w-2/5">
 					<div class="flex justify-end gap-3">
 						<h3 class="text-sm leading-6 font-medium text-gray-900">Updated</h3>
 						<h3 class="text-sm leading-6 font-light text-gray-900">12/15/2021 10:05:26 PM</h3>
-						<a href="#" class="text-sm leading-6 font-medium text-blue-600 hover:underline">DAG</a>
+						<a href="#" class="text-sm text-white hover:underline bg-gray-700 px-2 py-1 rounded-md">DAG</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="relative overflow-x-auto sm:rounded-lg m-3">
 		<div class="px-4 py-5 sm:px-6">
 			<p class="font-semibold">Average resource used over time</p>
 			<div class="m-3">
