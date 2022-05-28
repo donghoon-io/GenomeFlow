@@ -77,7 +77,7 @@
 						<p class="text-sm text-black bg-yellow-300 px-2 py-1 rounded-md text-center">Pending</p>
 					</td>
 					{/if}
-					<td class="px-6 py-4"> {job.task_count_total} ({job.task_count_completed} / {job.task_count_completed} / {job.task_count_failed}) </td>
+					<td class="px-6 py-4">{job.task_count_total} ({job.task_count_completed} / {job.task_count_completed} / {job.task_count_failed})</td>
 					<td class="px-6 py-4">{#if job.last_processed_date}{timeDiff(job.started_date, job.last_processed_date)}{/if}</td>
 					<td class="px-6 py-4"> $1.21 </td>
 					<td class="px-6 py-4">{#if job.last_processed_date}{new Date(job.last_processed_date).toLocaleString()}{/if}</td>
