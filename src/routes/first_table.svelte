@@ -60,10 +60,10 @@
 			</thead>
 			<tbody>
 				{#each job_data as job}
-				<tr class="bg-gray-50 border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> {job.sno} </th>
-					<td class="px-6 py-4"> {job.project_name} </td>
-					<td class="px-6 py-4"> {job.job_name} </td>
+				<tr class="bg-gray-50 border-b cursor-pointer" onclick="window.location='/first_table/{job.sno}';">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{job.sno}</th>
+					<td class="px-6 py-4">{job.project_name}</td>
+					<td class="px-6 py-4">{job.job_name}</td>
 					{#if job.task_count_completed == job.task_count_total}
 					<td class="px-6 py-4">
 						<p class="text-sm text-white bg-blue-700 px-2 py-1 rounded-md text-center">Completed</p>
