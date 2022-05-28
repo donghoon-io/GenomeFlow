@@ -1,6 +1,24 @@
 <script>
+	import { onMount } from 'svelte';
 	import "@carbon/charts/styles.min.css";
 	import { LineChart, GaugeChart, BarChartSimple, MeterChart } from "@carbon/charts-svelte";
+	import mysql from "mysql" // 기본 기능을 사용하려면 mysql2을 가져온다.
+
+	onMount(() => {
+
+	const connection = mysql.createConnection({
+		host: '34.73.61.94',
+		user: 'donghoon',
+		password: 'dhckdgns!0411',
+		database: 'logger_db'
+	})
+	connection.connect();
+		connection.query("SELECT * FROM job", [ 4 ], function (err, results) {
+			console.log(results)
+		})
+	connection.end();
+	});
+
 </script>
 
 <svelte:head>

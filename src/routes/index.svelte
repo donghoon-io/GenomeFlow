@@ -62,9 +62,9 @@
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 4 </th>
-					<td class="px-6 py-4"> First_table </td>
+					<td class="px-6 py-4"> first_table </td>
 					<td class="px-6 py-4"> Complete </td>
-					<td class="px-6 py-4"> In progress </td>
+					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4">
 						<a href="first_table" class="font-medium text-blue-600 hover:underline">/ first_table</a>
 					</td>
