@@ -1,21 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import { tens, timeDiff } from "$lib/dateformat.js";
 
 	var job_data = [];
-
-	function tens(num) {
-		return num.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
-	}
-
-	function timeDiff(pre, post) {
-		let diff = (Date.parse(post) - Date.parse(pre))/1000;
-		let m = Math.floor((diff/60) % 60);
-		let h = Math.floor((diff/3600) % 24);
-		let d = Math.floor(diff/86400);
-
-		return `${d}:${tens(h)}:${tens(m)}`;
-	}
-
 
 	onMount(async () => {
 		fetch("http://127.0.0.1:5555/?" + new URLSearchParams({

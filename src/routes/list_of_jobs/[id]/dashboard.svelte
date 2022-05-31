@@ -2,21 +2,50 @@
 	import { onMount } from 'svelte';
 	import "@carbon/charts/styles.min.css";
 	import { LineChart, GaugeChart, BarChartSimple, MeterChart } from "@carbon/charts-svelte";
-	import mysql from "mysql" // 기본 기능을 사용하려면 mysql2을 가져온다.
+	import { page } from "$app/stores";
+	import { tens, timeDiff } from "$lib/dateformat.js";
 
+	const { id } = $page.params;
+	
+	var job_data = [];
+	var logger_resource_data = [];
+	
 	onMount(() => {
+		fetch(
+			"http://127.0.0.1:5555/?" +
+				new URLSearchParams({
+					table: "job",
+					query: "sno",
+					equals: `${id}`,
+				}),
+			{ method: "GET" }
+		)
+		.then((response) => response.json())
+		.then((data) => {
+			job_data = data;
 
-	const connection = mysql.createConnection({
-		host: '34.73.61.94',
-		user: 'donghoon',
-		password: 'dhckdgns!0411',
-		database: 'logger_db'
-	})
-	connection.connect();
-		connection.query("SELECT * FROM job", [ 4 ], function (err, results) {
-			console.log(results)
+			fetch(
+				"http://127.0.0.1:5555/?" +
+					new URLSearchParams({
+						table: "logger_resource_allocation",
+						query: "sno",
+						equals: `${id}`,
+					}),
+				{ method: "GET" }
+			)
+			.then((response) => response.json())
+			.then((data) => {
+				logger_resource_data = data;
+			})
+			.catch((error) => {
+				console.log(error);
+				logger_resource_data = [];
+			});
 		})
-	connection.end();
+		.catch((error) => {
+			console.log(error);
+			job_data = [];
+		});
 	});
 
 </script>
@@ -34,7 +63,9 @@
 						<a href="/">
 							<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
 						</a>
-						<h3 class="text-lg leading-6 font-medium text-gray-900">ESCA</h3>
+						{#each job_data as job}
+						<h3 class="text-lg leading-6 font-medium text-gray-900">{job.job_name}</h3>
+						{/each}
 					</div>
 				</div>
 				<div class="w-2/5">
@@ -58,17 +89,19 @@
 					<th scope="col" class="px-6 py-3"> Updated </th>
 				</tr>
 			</thead>
+			{#each logger_resource_data as resource}
 			<tbody>
 				<tr>
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 2 </th>
-					<td class="px-6 py-4"> aleelab-ten </td>
-					<td class="px-6 py-4"> ESCA </td>
-					<td class="px-6 py-4"> 173 (0 / 141 / 32) </td>
-					<td class="px-6 py-4"> 16:20 </td>
-					<td class="px-6 py-4"> $1.21 </td>
-					<td class="px-6 py-4"> 12/15/2021 12:26:49 AM </td>
+					<td class="px-6 py-4"> {resource.dno} </td>
+					<td class="px-6 py-4"> {resource.dino} </td>
+					<td class="px-6 py-4"> {resource.machine_type} </td>
+					<td class="px-6 py-4"> {resource.cores} </td>
+					<td class="px-6 py-4"> {resource.memory} </td>
+					<td class="px-6 py-4"> {resource.disk} </td>
+					<td class="px-6 py-4"> PUT UPDATED TIME HERE </td>
 				</tr>
 			</tbody>
+			{/each}
 		</table>
 	</div>
 
@@ -77,19 +110,20 @@
 			<div class="flex gap-3">
 				<div class="w-3/4">
 					<div class="p-5 bg-gray-50 drop-shadow-lg sm:rounded-lg">
+						{#if job_data.length != 0}
 						<MeterChart
 							data={[
 							{
 								"group": "Complete",
-								"value": 234
+								"value": job_data[0].task_count_completed
 							},
 							{
 								"group": "Processing",
-								"value": 210
+								"value": job_data[0].task_count_processing
 							},
 							{
-								"group": "Pending",
-								"value": 173
+								"group": "Failed",
+								"value": job_data[0].task_count_failed
 							}
 						]}
 							options={{
@@ -97,7 +131,7 @@
 							"height": "130px",
 							"meter": {
 								"proportional": {
-									"total": 617,
+									"total": job_data[0].task_count_total,
 									"unit": "Tasks"
 								}
 							},
@@ -113,6 +147,7 @@
 							},
 						}}
 						/>
+						{/if}
 					</div>
 					<div class="my-3 p-5 bg-gray-50 drop-shadow-lg sm:rounded-lg">
 						<p class="font-semibold">Average resource used over time</p>

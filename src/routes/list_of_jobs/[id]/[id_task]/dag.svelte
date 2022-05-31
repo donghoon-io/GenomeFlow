@@ -2,29 +2,13 @@
 	import { onMount } from 'svelte';
 	import mermaid from 'mermaid';
 	import { page } from "$app/stores";
+	import { tens, timeDiff } from "$lib/dateformat.js";
 
 	const { id, id_task } = $page.params;
 
 	var job_data = [];
 	var logger_data = [];
-
-
-	function tens(num) {
-		return num.toLocaleString("en-US", {
-			minimumIntegerDigits: 2,
-			useGrouping: false,
-		});
-	}
-
-function timeDiff(pre, post) {
-	let diff = (Date.parse(post) - Date.parse(pre)) / 1000;
-	let m = Math.floor((diff / 60) % 60);
-	let h = Math.floor((diff / 3600) % 24);
-	let d = Math.floor(diff / 86400);
-
-	return `${d}:${tens(h)}:${tens(m)}`;
-}
-
+	
 	mermaid.initialize({
 		startOnLoad: true
 	});

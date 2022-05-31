@@ -1,6 +1,71 @@
 <script>
+	import { onMount } from 'svelte';
 	import "@carbon/charts/styles.min.css";
 	import { LineChart, GaugeChart } from "@carbon/charts-svelte";
+	import { page } from "$app/stores";
+	import { tens, timeDiff } from "$lib/dateformat.js";
+
+	const { id, id_task } = $page.params;
+	
+	var job_data = [];
+	var logger_data = [];
+	var logger_resource_data = [];
+	
+	onMount(() => {
+		fetch(
+			"http://127.0.0.1:5555/?" +
+				new URLSearchParams({
+					table: "job",
+					query: "sno",
+					equals: `${id}`,
+				}),
+			{ method: "GET" }
+		)
+		.then((response) => response.json())
+		.then((data) => {
+			job_data = data;
+
+			fetch(
+				"http://127.0.0.1:5555/?" +
+					new URLSearchParams({
+						table: "logger",
+						query: "sno",
+						equals: `${id_task}`,
+					}),
+				{ method: "GET" }
+			)
+			.then((response) => response.json())
+			.then((data) => {
+				logger_data = data;
+
+				fetch(
+					"http://127.0.0.1:5555/?" +
+						new URLSearchParams({
+							table: "logger_resource_allocation",
+							query: "sno",
+							equals: `${id}`,
+						}),
+					{ method: "GET" }
+				)
+				.then((response) => response.json())
+				.then((data) => {
+					logger_resource_data = data;
+				})
+				.catch((error) => {
+					console.log(error);
+					logger_resource_data = [];
+				});
+			})
+			.catch((error) => {
+				console.log(error);
+				logger_data = [];
+			});
+		})
+		.catch((error) => {
+			console.log(error);
+			job_data = [];
+		});
+	});
 </script>
 
 <svelte:head>
@@ -16,7 +81,9 @@
 						<a href="/">
 							<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
 						</a>
-						<h3 class="text-lg leading-6 font-medium text-gray-900">Task 1</h3>
+						{#each logger_data as log}
+						<h3 class="text-lg leading-6 font-medium text-gray-900">{log.file_name}</h3>
+						{/each}
 					</div>
 				</div>
 				<div class="w-2/5">
@@ -40,18 +107,19 @@
 					<th scope="col" class="px-6 py-3"> Updated </th>
 				</tr>
 			</thead>
+			{#each logger_resource_data as resource}
 			<tbody>
 				<tr>
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 2 </th>
-					<td class="px-6 py-4"> aleelab-ten </td>
-					<td class="px-6 py-4"> ESCA </td>
-					<td class="px-6 py-4"> 173 (0 / 141 / 32) </td>
-					<td class="px-6 py-4"> 16:20 </td>
-					<td class="px-6 py-4"> $1.21 </td>
-					<td class="px-6 py-4"> 12/15/2021 12:26:49 AM </td>
+					<td class="px-6 py-4"> {resource.dno} </td>
+					<td class="px-6 py-4"> {resource.dino} </td>
+					<td class="px-6 py-4"> {resource.machine_type} </td>
+					<td class="px-6 py-4"> {resource.cores} </td>
+					<td class="px-6 py-4"> {resource.memory} </td>
+					<td class="px-6 py-4"> {resource.disk} </td>
+					<td class="px-6 py-4"> PUT UPDATED TIME HERE </td>
 				</tr>
 			</tbody>
-		</table>
+			{/each}
 	</div>
 
 <div class="relative overflow-x-auto bg-gray-50 drop-shadow-lg sm:rounded-lg mb-3">
