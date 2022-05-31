@@ -13,3 +13,7 @@ export function timeDiff(pre, post, isHour = false) {
 
 	return isHour ? `${tens(h)}:${tens(m)}` : `${d}:${tens(h)}:${tens(m)}`;
 }
+
+export function goBack() {
+	window.history.back();
+}

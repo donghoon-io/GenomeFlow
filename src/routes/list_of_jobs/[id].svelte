@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 	import { page } from "$app/stores";
-	import { tens, timeDiff } from "$lib/dateformat.js";
+	import { goBack, tens, timeDiff } from "$lib/dateformat.js";
 
 	const { id } = $page.params;
 
@@ -69,7 +69,7 @@
 	<div class="bg-gray-50 drop-shadow-lg overflow-hidden sm:rounded-lg mb-3">
 		<div class="px-4 py-5 sm:px-6">
 			<div class="flex gap-3">
-				<a href="/">
+				<a on:click={() => (goBack())}>
 					<svg
 						class="w-6 h-6 dark:text-black"
 						fill="none"

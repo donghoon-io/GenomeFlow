@@ -3,7 +3,7 @@
 	import "@carbon/charts/styles.min.css";
 	import { LineChart, GaugeChart, BarChartSimple, MeterChart } from "@carbon/charts-svelte";
 	import { page } from "$app/stores";
-	import { tens, timeDiff } from "$lib/dateformat.js";
+	import { goBack, tens, timeDiff } from "$lib/dateformat.js";
 
 	const { id } = $page.params;
 	
@@ -60,7 +60,7 @@
 			<div class="flex">
 				<div class="w-3/5">
 					<div class="flex gap-3">
-						<a href="/">
+						<a on:click={() => (goBack())}>
 							<svg class="w-6 h-6 dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
 						</a>
 						{#each job_data as job}
