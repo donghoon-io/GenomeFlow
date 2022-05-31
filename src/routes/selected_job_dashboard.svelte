@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>job_dashboard</title>
+	<title>selected_job_dashboard</title>
 </svelte:head>
 
 <section>
@@ -39,14 +39,37 @@
 				</div>
 				<div class="w-2/5">
 					<div class="flex justify-end gap-3">
-						<h3 class="text-sm leading-6 font-medium text-gray-900">Updated</h3>
-						<h3 class="text-sm leading-6 font-light text-gray-900">12/15/2021 10:05:26 PM</h3>
 						<a href="#" class="text-sm text-white hover:underline bg-gray-700 px-2 py-1 rounded-md">DAG</a>
 						<a href="#" class="text-sm text-white hover:underline bg-gray-400 px-2 py-1 rounded-md">Task list</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<hr>
+		<table class="w-full text-sm text-left text-gray-500">
+			<thead class="text-xs text-gray-700 uppercase">
+				<tr>
+					<th scope="col" class="px-6 py-3"> (DNO) </th>
+					<th scope="col" class="px-6 py-3"> (DINO) </th>
+					<th scope="col" class="px-6 py-3"> Machine type </th>
+					<th scope="col" class="px-6 py-3"> CPU </th>
+					<th scope="col" class="px-6 py-3"> RAM </th>
+					<th scope="col" class="px-6 py-3"> HDD </th>
+					<th scope="col" class="px-6 py-3"> Updated </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 2 </th>
+					<td class="px-6 py-4"> aleelab-ten </td>
+					<td class="px-6 py-4"> ESCA </td>
+					<td class="px-6 py-4"> 173 (0 / 141 / 32) </td>
+					<td class="px-6 py-4"> 16:20 </td>
+					<td class="px-6 py-4"> $1.21 </td>
+					<td class="px-6 py-4"> 12/15/2021 12:26:49 AM </td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="relative overflow-x-auto">

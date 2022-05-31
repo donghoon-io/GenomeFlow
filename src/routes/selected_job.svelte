@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>job_view</title>
+	<title>selected_job</title>
 </svelte:head>
 
 <section>

@@ -33,7 +33,7 @@
 </script>
 
 <svelte:head>
-	<title>first_table</title>
+	<title>list_of_jobs</title>
 </svelte:head>
 
 <section>

@@ -29,99 +29,66 @@
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 1 </th>
-					<td class="px-6 py-4"> job_view </td>
+					<td class="px-6 py-4"> list_of_jobs </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="job_view" class="font-medium text-blue-600 hover:underline">/ job_view</a>
+						<a href="list_of_jobs" class="font-medium text-blue-600 hover:underline">/ list_of_jobs</a>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 2 </th>
-					<td class="px-6 py-4"> task_view </td>
+					<td class="px-6 py-4"> selected_job </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="task_view" class="font-medium text-blue-600 hover:underline">/ task_view</a>
+						<a href="selected_job" class="font-medium text-blue-600 hover:underline">/ selected_job</a>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 3 </th>
-					<td class="px-6 py-4"> task_view (duplicate) </td>
+					<td class="px-6 py-4"> selected_job_dag</td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="task_view_2" class="font-medium text-blue-600 hover:underline">/ task_view_2</a>
+						<a href="selected_job_dag" class="font-medium text-blue-600 hover:underline">/ selected_job_dag</a>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 4 </th>
-					<td class="px-6 py-4"> first_table </td>
+					<td class="px-6 py-4"> selected_job_dashboard </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4">
-						<a href="first_table" class="font-medium text-blue-600 hover:underline">/ first_table</a>
+						<a href="selected_job_dashboard" class="font-medium text-blue-600 hover:underline">/ selected_job_dashboard</a>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 5 </th>
-					<td class="px-6 py-4"> Job_selection </td>
+					<td class="px-6 py-4"> selected_task_dag </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="job_selection" class="font-medium text-blue-600 hover:underline">/ job_selection</a>
+						<a href="selected_task_dag" class="font-medium text-blue-600 hover:underline">/ selected_task_dag</a>
 					</td>
 				</tr>
 			</tbody>
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 6 </th>
-					<td class="px-6 py-4"> Job_dag </td>
+					<td class="px-6 py-4"> selected_task_dashboard </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
 					<td class="px-6 py-4">
-						<a href="job_dag" class="font-medium text-blue-600 hover:underline">/ job_dag</a>
-					</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr class="border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 7 </th>
-					<td class="px-6 py-4"> Job_dashboard </td>
-					<td class="px-6 py-4"> Complete </td>
-					<td class="px-6 py-4"> In progress </td>
-					<td class="px-6 py-4">
-						<a href="job_dashboard" class="font-medium text-blue-600 hover:underline">/ job_dashboard</a>
-					</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr class="border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 8 </th>
-					<td class="px-6 py-4"> Task_dag </td>
-					<td class="px-6 py-4"> Complete </td>
-					<td class="px-6 py-4"> In progress </td>
-					<td class="px-6 py-4">
-						<a href="task_dag" class="font-medium text-blue-600 hover:underline">/ task_dag</a>
-					</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr class="border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 9 </th>
-					<td class="px-6 py-4"> Task_dashboard </td>
-					<td class="px-6 py-4"> Complete </td>
-					<td class="px-6 py-4"> In progress </td>
-					<td class="px-6 py-4">
-						<a href="task_dashboard" class="font-medium text-blue-600 hover:underline">/ task_dashboard</a>
+						<a href="selected_task_dashboard" class="font-medium text-blue-600 hover:underline">/ selected_task_dashboard</a>
 					</td>
 				</tr>
 			</tbody>

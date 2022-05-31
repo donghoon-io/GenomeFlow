@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>job_dag</title>
+	<title>selected_job_dag</title>
 </svelte:head>
 
 <section>
