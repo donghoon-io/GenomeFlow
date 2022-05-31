@@ -134,7 +134,7 @@
 			</thead>
 			{#each job_data as job}
 				<tbody>
-					<tr>
+					<tr class="cursor-pointer" onclick="window.location='/list_of_jobs/{job.sno}/dashboard';">
 						<th
 							scope="row"
 							class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
@@ -214,7 +214,7 @@
 			</thead>
 			<tbody>
 				{#each logger_data as log}
-				<tr class="border-b">
+				<tr class="border-b cursor-pointer" onclick="window.location='/list_of_jobs/{job_data[0].sno}/{log.sno}/dashboard';">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
 						{log.sno}
 					</th>
