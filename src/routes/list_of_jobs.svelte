@@ -2,21 +2,6 @@
 	import { onMount } from 'svelte';
 	import { tens, timeDiff } from "$lib/dateformat.js";
 
-	var job_data = [];
-
-	onMount(async () => {
-		fetch("http://127.0.0.1:5555/?" + new URLSearchParams({
-			table: 'job'
-		}), { method: 'GET' })
-			.then(response => response.json())
-			.then(data => {
-				job_data = data;
-				console.log(job_data);
-			}).catch(error => {
-				console.log(error);
-				job_data = [];
-		});
-	});
 </script>
 
 <svelte:head>
@@ -46,30 +31,30 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each job_data as job}
-				<tr class="bg-gray-50 border-b cursor-pointer" onclick="window.location='/list_of_jobs/{job.sno}';">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{job.sno}</th>
-					<td class="px-6 py-4">{job.project_name}</td>
-					<td class="px-6 py-4">{job.job_name}</td>
-					{#if job.task_count_completed == job.task_count_total}
+				<tr class="bg-gray-50 border-b cursor-pointer" onclick="window.location='/list_of_jobs/1';">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">1</th>
+					<td class="px-6 py-4">aleelab-genomeflow-test-opt</td>
+					<td class="px-6 py-4">test</td>
 					<td class="px-6 py-4">
 						<p class="text-sm text-white bg-blue-700 px-2 py-1 rounded-md text-center">Completed</p>
 					</td>
-					{:else if job.task_count_completed != 0}
-					<td class="px-6 py-4">
-						<p class="text-sm text-white bg-blue-400 px-2 py-1 rounded-md text-center">Processing</p>
-					</td>
-					{:else}
-					<td class="px-6 py-4">
-						<p class="text-sm text-black bg-yellow-300 px-2 py-1 rounded-md text-center">Pending</p>
-					</td>
-					{/if}
-					<td class="px-6 py-4">{job.task_count_total} ({job.task_count_completed} / {job.task_count_completed} / {job.task_count_failed})</td>
-					<td class="px-6 py-4">{#if job.last_processed_date}{timeDiff(job.started_date, job.last_processed_date)}{/if}</td>
-					<td class="px-6 py-4"> $1.21 </td>
-					<td class="px-6 py-4">{#if job.last_processed_date}{new Date(job.last_processed_date).toLocaleString()}{/if}</td>
+					<td class="px-6 py-4">0 / 1 / 0</td>
+					<td class="px-6 py-4">0:2:37</td>
+					<td class="px-6 py-4">0.705</td>
+					<td class="px-6 py-4">9/27/2022, 5:50:00 PM</td>
 				</tr>
-				{/each}
+				<tr class="bg-gray-50 border-b cursor-pointer" onclick="window.location='/list_of_jobs/2';">
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">2</th>
+					<td class="px-6 py-4">aleelab-genomeflow-test</td>
+					<td class="px-6 py-4">test</td>
+					<td class="px-6 py-4">
+						<p class="text-sm text-white bg-blue-700 px-2 py-1 rounded-md text-center">Completed</p>
+					</td>
+					<td class="px-6 py-4">0 / 1 / 0</td>
+					<td class="px-6 py-4">0:2:42</td>
+					<td class="px-6 py-4">0.3575</td>
+					<td class="px-6 py-4">9/27/2022, 8:42:27 PM</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

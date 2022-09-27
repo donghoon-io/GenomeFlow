@@ -8,6 +8,7 @@
 
 	var job_data = [];
 	var logger_data = [];
+	var dag_log_data = [];
 
 	mermaid.initialize({
 		startOnLoad: true
@@ -37,15 +38,33 @@
 						}),
 					{ method: "GET" }
 				)
+				.then((response) => response.json())
+				.then((data) => {
+					logger_data = data;
+
+					fetch(
+						"http://127.0.0.1:5555/?" +
+							new URLSearchParams({
+								table: "dag_log",
+								query: "sno",
+								equals: id,
+							}),
+						{ method: "GET" }
+					)
 					.then((response) => response.json())
 					.then((data) => {
-						logger_data = data;
-						console.log(logger_data);
+						dag_log_data = data;
+						console.log(dag_log_data);
 					})
 					.catch((error) => {
 						console.log(error);
-						logger_data = [];
+						dag_log_data = [];
 					});
+				})
+				.catch((error) => {
+					console.log(error);
+					logger_data = [];
+				});
 			})
 			.catch((error) => {
 				console.log(error);

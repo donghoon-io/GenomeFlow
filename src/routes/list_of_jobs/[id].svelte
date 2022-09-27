@@ -117,63 +117,20 @@
 					</th>
 				</tr>
 			</thead>
-			{#each job_data as job}
 				<tbody>
-					<tr class="cursor-pointer" onclick="window.location='/list_of_jobs/{job.sno}/dashboard';">
-						<th
-							scope="row"
-							class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-							>{job.sno}</th
-						>
-						<td class="px-6 py-4">{job.project_name}</td>
-						<td class="px-6 py-4">{job.job_name}</td>
-						{#if job.task_count_completed == job.task_count_total}
-							<td class="px-6 py-4">
-								<p
-									class="text-sm text-white bg-blue-700 px-2 py-1 rounded-md text-center"
-								>
-									Completed
-								</p>
-							</td>
-						{:else if job.task_count_completed != 0}
-							<td class="px-6 py-4">
-								<p
-									class="text-sm text-white bg-blue-400 px-2 py-1 rounded-md text-center"
-								>
-									Processing
-								</p>
-							</td>
-						{:else}
-							<td class="px-6 py-4">
-								<p
-									class="text-sm text-black bg-yellow-300 px-2 py-1 rounded-md text-center"
-								>
-									Pending
-								</p>
-							</td>
-						{/if}
-						<td class="px-6 py-4"
-							>{job.task_count_total} ({job.task_count_completed} /
-							{job.task_count_completed} / {job.task_count_failed})</td
-						>
-						<td class="px-6 py-4"
-							>{#if job.last_processed_date}{timeDiff(
-									job.started_date,
-									job.last_processed_date
-								)}{/if}</td
-						>
-						<td class="px-6 py-4"> $1.21 </td>
-						<td class="px-6 py-4">{#if job.last_processed_date}{new Date(job.last_processed_date).toLocaleString()}{/if}</td>
-						<td class="px-6 py-4 text-right">
-							<a
-								href="/list_of_jobs/{job.sno}/dag"
-								class="text-sm text-white hover:underline bg-gray-700 px-2 py-1 rounded-md"
-								>DAG</a
-							>
+					<tr class="bg-gray-50 border-b cursor-pointer" onclick="window.location='/list_of_jobs/1';">
+						<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">1</th>
+						<td class="px-6 py-4">aleelab-genomeflow-test-opt</td>
+						<td class="px-6 py-4">test</td>
+						<td class="px-6 py-4">
+							<p class="text-sm text-white bg-blue-700 px-2 py-1 rounded-md text-center">Completed</p>
 						</td>
+						<td class="px-6 py-4">0 / 1 / 0</td>
+						<td class="px-6 py-4">0:2:37</td>
+						<td class="px-6 py-4">0.705</td>
+						<td class="px-6 py-4">9/27/2022, 5:50:00 PM</td>
 					</tr>
 				</tbody>
-			{/each}
 		</table>
 	</div>
 
@@ -198,32 +155,24 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each logger_data as log}
-				<tr class="border-b cursor-pointer" onclick="window.location='/list_of_jobs/{job_data[0].sno}/{log.sno}/dashboard';">
+				<tr class="border-b cursor-pointer" onclick="window.location='/list_of_jobs/1/1/dashboard';">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-						{log.sno}
+						1
 					</th>
-					<td class="px-6 py-4"> {log.sample_name} </td>
+					<td class="px-6 py-4">Task 1</td>
 					<td class="px-6 py-4">
-						{#if log.file_status == "C"}
 						<p class="text-sm text-white bg-blue-700 px-2 py-1 rounded-md text-center">Completed</p>
-						{:else if log.file_status == "R"}
-						<p class="text-sm text-white bg-blue-400 px-2 py-1 rounded-md text-center">Processing</p>
-						{:else}
-						<p class="text-sm text-black bg-yellow-300 px-2 py-1 rounded-md text-center">Failed</p>
-						{/if}
 					</td>
-					<td class="px-6 py-4"> 2.0% </td>
-					<td class="px-6 py-4"> 3.0% </td>
-					<td class="px-6 py-4"> 4.0% </td>
-					<td class="px-6 py-4"> {timeDiff(log.created_datetime, log.completed_datetime, true)} </td>
-					<td class="px-6 py-4"> $0.07 </td>
-					<td class="px-6 py-4"> {#if log.processed_datetime}{new Date(log.processed_datetime).toLocaleString()}{/if} </td>
+					<td class="px-6 py-4"> 21.0% </td>
+					<td class="px-6 py-4"> 40.0% </td>
+					<td class="px-6 py-4"> 23.0% </td>
+					<td class="px-6 py-4">2:37</td>
+					<td class="px-6 py-4"> $0.705 </td>
+					<td class="px-6 py-4">9/27/2022, 5:50:00 PM</td>
 					<td class="px-6 py-4 text-right">
-						<a href="/list_of_jobs/{job_data[0].sno}/{log.sno}/dag" class="text-sm text-white hover:underline bg-gray-400 px-2 py-1 rounded-md">DAG</a>
+						<a href="/list_of_jobs/1/1/dag" class="text-sm text-white hover:underline bg-gray-700 px-2 py-1 rounded-md">DAG</a>
 					</td>
 				</tr>
-				{/each}
 			</tbody>
 		</table>
 	</div>
