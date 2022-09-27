@@ -4,7 +4,7 @@
     "src": ".svelte-kit/build/index.js",
     "isEntry": true,
     "imports": [
-      "_index-a93c14e4.js"
+      "_index-20d5dc34.js"
     ],
     "dynamicImports": [
       "src/hooks.js"
@@ -15,10 +15,10 @@
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a93c14e4.js"
+      "_index-20d5dc34.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-d87e5a51.css"
+      "assets/entries/pages/__layout.svelte-4a23b83d.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -26,7 +26,7 @@
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a93c14e4.js"
+      "_index-20d5dc34.js"
     ]
   },
   "src/routes/index.svelte": {
@@ -34,22 +34,204 @@
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a93c14e4.js"
+      "_index-20d5dc34.js"
     ]
   },
-  "src/routes/dashboard.svelte": {
-    "file": "entries/pages/dashboard.svelte.js",
-    "src": "src/routes/dashboard.svelte",
+  "src/routes/selected_task_dashboard.svelte": {
+    "file": "entries/pages/selected_task_dashboard.svelte.js",
+    "src": "src/routes/selected_task_dashboard.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a93c14e4.js"
-    ],
-    "css": [
-      "assets/entries/pages/dashboard.svelte-829b3007.css"
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js",
+      "_LineChart-2a59414e.js"
     ]
   },
-  "_index-a93c14e4.js": {
-    "file": "chunks/index-a93c14e4.js"
+  "src/routes/selected_job_dashboard.svelte": {
+    "file": "entries/pages/selected_job_dashboard.svelte.js",
+    "src": "src/routes/selected_job_dashboard.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js",
+      "_BarChartSimple-2dedb208.js",
+      "_MeterChart-dd9bf35f.js"
+    ]
+  },
+  "src/routes/selected_task_dag.svelte": {
+    "file": "entries/pages/selected_task_dag.svelte.js",
+    "src": "src/routes/selected_task_dag.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js"
+    ],
+    "css": [
+      "assets/entries/pages/selected_task_dag.svelte-4615261b.css"
+    ]
+  },
+  "src/routes/list_of_jobs/[id]/dashboard.svelte": {
+    "file": "entries/pages/list_of_jobs/_id_/dashboard.svelte.js",
+    "src": "src/routes/list_of_jobs/[id]/dashboard.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js",
+      "_BarChartSimple-2dedb208.js",
+      "_MeterChart-dd9bf35f.js",
+      "_stores-1949e0ee.js"
+    ]
+  },
+  "src/routes/list_of_jobs/[id]/dag.svelte": {
+    "file": "entries/pages/list_of_jobs/_id_/dag.svelte.js",
+    "src": "src/routes/list_of_jobs/[id]/dag.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_stores-1949e0ee.js",
+      "_dateformat-02c62278.js"
+    ],
+    "css": [
+      "assets/entries/pages/selected_task_dag.svelte-4615261b.css"
+    ]
+  },
+  "src/routes/list_of_jobs/[id]/[id_task]/dashboard.svelte": {
+    "file": "entries/pages/list_of_jobs/_id_/_id_task_/dashboard.svelte.js",
+    "src": "src/routes/list_of_jobs/[id]/[id_task]/dashboard.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js",
+      "_LineChart-2a59414e.js",
+      "_stores-1949e0ee.js"
+    ]
+  },
+  "src/routes/list_of_jobs/[id]/[id_task]/dag.svelte": {
+    "file": "entries/pages/list_of_jobs/_id_/_id_task_/dag.svelte.js",
+    "src": "src/routes/list_of_jobs/[id]/[id_task]/dag.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_stores-1949e0ee.js",
+      "_dateformat-02c62278.js"
+    ],
+    "css": [
+      "assets/entries/pages/selected_task_dag.svelte-4615261b.css"
+    ]
+  },
+  "src/routes/list_of_jobs/[id].svelte": {
+    "file": "entries/pages/list_of_jobs/_id_.svelte.js",
+    "src": "src/routes/list_of_jobs/[id].svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_stores-1949e0ee.js"
+    ]
+  },
+  "src/routes/list_of_jobs.svelte": {
+    "file": "entries/pages/list_of_jobs.svelte.js",
+    "src": "src/routes/list_of_jobs.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js"
+    ]
+  },
+  "src/routes/selected_job.svelte": {
+    "file": "entries/pages/selected_job.svelte.js",
+    "src": "src/routes/selected_job.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js"
+    ]
+  },
+  "src/routes/deprecated/job_selection.svelte": {
+    "file": "entries/pages/deprecated/job_selection.svelte.js",
+    "src": "src/routes/deprecated/job_selection.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js"
+    ]
+  },
+  "src/routes/deprecated/task_view_2.svelte": {
+    "file": "entries/pages/deprecated/task_view_2.svelte.js",
+    "src": "src/routes/deprecated/task_view_2.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js",
+      "_LineChart-2a59414e.js"
+    ]
+  },
+  "src/routes/deprecated/task_view.svelte": {
+    "file": "entries/pages/deprecated/task_view.svelte.js",
+    "src": "src/routes/deprecated/task_view.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js",
+      "_BarChartSimple-2dedb208.js",
+      "_LineChart-2a59414e.js"
+    ]
+  },
+  "src/routes/deprecated/backup.svelte": {
+    "file": "entries/pages/deprecated/backup.svelte.js",
+    "src": "src/routes/deprecated/backup.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js"
+    ]
+  },
+  "src/routes/dag.svelte": {
+    "file": "entries/pages/dag.svelte.js",
+    "src": "src/routes/dag.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-20d5dc34.js"
+    ],
+    "css": [
+      "assets/entries/pages/selected_task_dag.svelte-4615261b.css"
+    ]
+  },
+  "_index-20d5dc34.js": {
+    "file": "chunks/index-20d5dc34.js"
+  },
+  "_GaugeChart-fa4301b9.js": {
+    "file": "chunks/GaugeChart-fa4301b9.js",
+    "imports": [
+      "_index-20d5dc34.js"
+    ],
+    "css": [
+      "assets/GaugeChart-eebbfd58.css"
+    ]
+  },
+  "_LineChart-2a59414e.js": {
+    "file": "chunks/LineChart-2a59414e.js",
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js"
+    ]
+  },
+  "_BarChartSimple-2dedb208.js": {
+    "file": "chunks/BarChartSimple-2dedb208.js",
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js"
+    ]
+  },
+  "_MeterChart-dd9bf35f.js": {
+    "file": "chunks/MeterChart-dd9bf35f.js",
+    "imports": [
+      "_index-20d5dc34.js",
+      "_GaugeChart-fa4301b9.js"
+    ]
+  },
+  "_stores-1949e0ee.js": {
+    "file": "chunks/stores-1949e0ee.js",
+    "imports": [
+      "_index-20d5dc34.js"
+    ]
+  },
+  "_dateformat-02c62278.js": {
+    "file": "chunks/dateformat-02c62278.js"
   },
   "src/hooks.js": {
     "file": "chunks/hooks-5b953b47.js",

@@ -51,17 +51,6 @@
 			<tbody>
 				<tr class="border-b">
 					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 3 </th>
-					<td class="px-6 py-4"> selected_job_dag</td>
-					<td class="px-6 py-4"> Complete </td>
-					<td class="px-6 py-4"> In progress </td>
-					<td class="px-6 py-4">
-						<a href="selected_job_dag" class="font-medium text-blue-600 hover:underline">/ selected_job_dag</a>
-					</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr class="border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 4 </th>
 					<td class="px-6 py-4"> selected_job_dashboard </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> Complete </td>
@@ -72,7 +61,7 @@
 			</tbody>
 			<tbody>
 				<tr class="border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 5 </th>
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 4 </th>
 					<td class="px-6 py-4"> selected_task_dag </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
@@ -83,7 +72,7 @@
 			</tbody>
 			<tbody>
 				<tr class="border-b">
-					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 6 </th>
+					<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> 5 </th>
 					<td class="px-6 py-4"> selected_task_dashboard </td>
 					<td class="px-6 py-4"> Complete </td>
 					<td class="px-6 py-4"> In progress </td>
